@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/White"
+    tools:context="com.yfy.app.VsionDetailActivity">
+
+    <com.yfy.view.SQToolBar style="@style/App_SQToolbar"/>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_150dp"
+        android:scaleType="fitCenter"
+
+        android:padding="@dimen/margin_10dp"
+        android:layout_marginTop="@dimen/margin_30dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="@dimen/textsize12"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/margin_15dp"
+        android:text="成都高新新城学校"
+        android:textColor="@color/Maroon"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="地址：成都高新区中和应龙北三路128号"
+        android:gravity="center"
+        android:textColor="@color/gray_text"
+        android:textSize="@dimen/textsize8"
+        android:layout_marginTop="@dimen/margin_30dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="联系电话：028-85030159"
+        android:layout_marginTop="@dimen/margin_3dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:textColor="@color/canlendar_text_color"
+        android:textSize="@dimen/textsize9"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="版权所有 © 成都高新新城学校"
+        android:gravity="center"
+        android:textColor="@color/canlendar_text_color"
+        android:layout_marginTop="@dimen/margin_3dp"
+        android:textSize="@dimen/textsize8"
+        />
+    <TextView
+        android:id="@+id/version"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/margin_15dp"
+        android:gravity="center"
+        android:textColor="@color/canlendar_text_color"
+        android:textSize="@dimen/textsize7"
+        android:text="(Version 2.0)" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        />
+
+    <TextView
+        android:id="@+id/version_tag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_10dp"
+        android:text="隐私声明"
+        android:gravity="center"
+        android:textColor="@color/app_color_bg"
+        android:autoLink="none"
+
+        android:textSize="@dimen/textsize7"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Copyright(c) 成都高新新城学校.All rights reserved."
+        android:gravity="center"
+        android:textColor="@color/canlendar_text_color"
+        android:textSize="@dimen/textsize7"
+        android:layout_marginBottom="@dimen/margin_30dp"
+        />
+</LinearLayout>

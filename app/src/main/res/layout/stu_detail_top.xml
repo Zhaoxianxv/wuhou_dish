@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/margin_300dp"
+    android:id="@+id/stu_main_pie_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.yfy.charting_mp.charts.RadarChart
+        android:id="@+id/stu_main_pie"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>

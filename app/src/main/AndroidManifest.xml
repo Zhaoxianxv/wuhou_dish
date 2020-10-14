@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.yfy.wuhoudish">
+
+    <!-- Required 一些系统要求的权限，如访问网络等 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!-- 8.0 允许安装未知来源权限 -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+
+
+    <application
+        android:name="com.yfy.base.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo_main"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name="com.yfy.app.welcome.WelcomeActivity"
+            android:theme="@style/AppThemeInitial">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- ****************************极光推送**************************** -->
+
+
+        <!-- User defined.  For test only  用户自定义的广播接收器 -->
+        <receiver
+            android:name="com.yfy.jpush.MyReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION"/> <!-- Required  用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED"/> <!-- Required  用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED"/> <!-- Required  用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED"/> <!-- Required  用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.CONNECTION"/> <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <!-- 小红点，处理 -->
+
+                <category android:name="com.yfy.wuhoudish"/>
+            </intent-filter>
+        </receiver>
+
+
+        <!-- login -->
+        <activity
+            android:name="com.yfy.app.login.PhoneCodectivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name="com.yfy.app.login.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name="com.yfy.app.login.AlterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name="com.yfy.app.login.AlterCllActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+
+
+
+        <activity
+            android:name="com.yfy.wuhoudish.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name="com.yfy.wuhoudish.StuListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name="com.yfy.wuhoudish.StuDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+
+        <activity
+            android:name="com.yfy.wuhoudish.StuSiteActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name="com.yfy.wuhoudish.StuScoreActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+
+        <!--stu-->
+
+        <activity
+            android:name="com.yfy.wuhoudish_stu.MainStuActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name="com.yfy.wuhoudish_stu.StuArtActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name="com.yfy.wuhoudish_stu.StuGradeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name="com.yfy.app.login.UserBaseActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+
+
+
+
+
+        <activity android:name="com.yfy.charting_mp.zxxtest.LineChartActivity1">
+
+        </activity> <!--  android:configChanges="keyboardHidden|orientation|screenSize"  -->
+        <activity android:name="com.yfy.charting_mp.zxxtest.LineChartActivity2">
+
+        </activity>
+        <!--<activity android:screenOrientation="landscape" android:name="MultipleChartsActivity">-->
+            <!---->
+        <!--</activity>-->
+        <activity android:name="com.yfy.charting_mp.zxxtest.notimportant.ChartMainActivity"></activity>
+        <activity android:name="com.yfy.charting_mp.zxxtest.BarChartActivity"></activity>
+        <activity android:name="com.yfy.charting_mp.zxxtest.HorizontalBarChartActivity"></activity>
+        <activity android:name="com.yfy.charting_mp.zxxtest.PieChartActivity"></activity>
+        <activity android:name="com.yfy.charting_mp.zxxtest.MultiLineChartActivity"></activity>
+        <activity android:name="com.yfy.charting_mp.zxxtest.BarChartActivityMultiDataset"></activity>
+        <activity android:name="com.yfy.charting_mp.zxxtest.DrawChartActivity"></activity>
+        <activity android:name="com.yfy.charting_mp.zxxtest.ScatterChartActivity"></activity>
+        <activity android:name="com.yfy.charting_mp.zxxtest.BubbleChartActivity"></activity>
+        <activity android:name="com.yfy.charting_mp.zxxtest.fragments.SimpleChartDemo"></activity>
+        <activity android:name="com.yfy.charting_mp.zxxtest.ListViewBarChartActivity"></activity>
+        <activity android:name="com.yfy.charting_mp.zxxtest.ListViewMultiChartActivity"></activity>
+        <activity android:name="com.yfy.charting_mp.zxxtest.StackedBarActivity"></activity>
+        <activity android:name="com.yfy.charting_mp.zxxtest.AnotherBarActivity"></activity>
+        <activity android:name="com.yfy.charting_mp.zxxtest.InvertedLineChartActivity"></activity>
+        <activity android:name="com.yfy.charting_mp.zxxtest.CandleStickChartActivity"></activity>
+        <activity android:name="com.yfy.charting_mp.zxxtest.CubicLineChartActivity"></activity>
+        <activity android:name="com.yfy.charting_mp.zxxtest.RadarChartActivitry"></activity>
+        <activity android:name="com.yfy.charting_mp.zxxtest.LineChartActivityColored"></activity>
+        <activity android:name="com.yfy.charting_mp.zxxtest.DynamicalAddingActivity"></activity>
+        <activity android:name="com.yfy.charting_mp.zxxtest.RealtimeLineChartActivity"></activity>
+        <activity android:name="com.yfy.charting_mp.zxxtest.CombinedChartActivity"></activity>
+        <activity android:name="com.yfy.charting_mp.zxxtest.PerformanceLineChart"></activity>
+        <activity android:name="com.yfy.charting_mp.zxxtest.BarChartActivitySinus"></activity>
+        <activity android:name="com.yfy.charting_mp.zxxtest.ScrollViewActivity"></activity>
+        <activity android:name="com.yfy.charting_mp.zxxtest.StackedBarActivityNegative"></activity>
+
+
+
+        <activity
+            android:name="com.yfy.hellocharts.zxxtest.HelloMainActivity"
+            android:label="@string/title_activity_line_chart" >
+        </activity>
+        <activity
+            android:name="com.yfy.hellocharts.zxxtest.LineChartActivity"
+            android:label="@string/title_activity_line_chart" >
+        </activity>
+        <activity
+            android:name="com.yfy.hellocharts.zxxtest.ColumnChartActivity"
+            android:label="@string/title_activity_column_chart" >
+        </activity>
+        <activity
+            android:name="com.yfy.hellocharts.zxxtest.PieChartActivity"
+            android:label="@string/title_activity_pie_chart" >
+        </activity>
+        <activity
+            android:name="com.yfy.hellocharts.zxxtest.BubbleChartActivity"
+            android:label="@string/title_activity_bubble_chart" >
+        </activity>
+        <activity
+            android:name="com.yfy.hellocharts.zxxtest.PreviewLineChartActivity"
+            android:label="@string/title_activity_preview_line_chart" >
+        </activity>
+        <activity
+            android:name="com.yfy.hellocharts.zxxtest.PreviewColumnChartActivity"
+            android:label="@string/title_activity_preview_column_chart" >
+        </activity>
+        <activity
+            android:name="com.yfy.hellocharts.zxxtest.ComboLineColumnChartActivity"
+            android:label="@string/title_activity_combo_line_column_chart" >
+        </activity>
+        <activity
+            android:name="com.yfy.hellocharts.zxxtest.LineColumnDependencyActivity"
+            android:label="@string/title_activity_line_column_dependency" >
+        </activity>
+        <activity
+            android:name="com.yfy.hellocharts.zxxtest.GoodBadChartActivity"
+            android:label="@string/title_activity_good_bad" >
+        </activity>
+        <activity
+            android:name="com.yfy.hellocharts.zxxtest.TempoChartActivity"
+            android:label="@string/title_activity_tempo_chart" >
+        </activity>
+        <activity
+            android:name="com.yfy.hellocharts.zxxtest.SpeedChartActivity"
+            android:label="@string/title_activity_speed_chart" >
+        </activity>
+        <activity
+            android:name="com.yfy.hellocharts.zxxtest.ViewPagerChartsActivity"
+            android:label="@string/title_activity_view_pager_charts" >
+        </activity>
+        <activity
+            android:name="com.yfy.hellocharts.zxxtest.AboutActivity"
+            android:label="@string/title_activity_about" >
+        </activity>
+    </application>
+
+</manifest>

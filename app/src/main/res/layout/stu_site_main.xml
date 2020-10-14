@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.yfy.view.SQToolBar style="@style/App_SQToolbar"/>
+
+
+    <TextView
+        android:id="@+id/stu_site_main_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_60dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/textsize6"
+        tools:text="@string/title"/>
+    <com.yfy.charting_mp.charts.PieChart
+        android:id="@+id/chart1"
+        android:layout_width="match_parent"
+        android:layout_below="@id/stu_site_main_tag"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:layout_height="match_parent"
+        />
+</RelativeLayout>

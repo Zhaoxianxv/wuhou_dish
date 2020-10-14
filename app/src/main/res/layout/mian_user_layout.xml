@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/margin_10dp"
+    android:paddingTop="@dimen/margin_10dp"
+    android:layout_marginRight="@dimen/margin_3dp"
+    android:layout_marginLeft="@dimen/margin_3dp"
+    >
+
+    <ImageView
+        android:id="@+id/main_user_head"
+        android:layout_width="@dimen/margin_80dp"
+        android:layout_height="@dimen/margin_80dp"
+        android:layout_marginLeft="@dimen/margin_15dp"
+        android:src="@drawable/order_user_name"
+        />
+
+    <TextView
+        android:id="@+id/main_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/app_base_text_color"
+        android:layout_toRightOf="@id/main_user_head"
+        android:layout_marginLeft="@dimen/margin_10dp"
+        tools:text="名称：张三"
+        />
+    <TextView
+        android:id="@+id/main_user_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/app_base_text_color"
+        android:layout_below="@id/main_user_name"
+        android:layout_toRightOf="@id/main_user_head"
+        android:layout_marginTop="@dimen/margin_15dp"
+        android:layout_marginLeft="@dimen/margin_10dp"
+        tools:text="职能："
+        />
+    <TextView
+        android:id="@+id/main_user_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/app_base_text_color"
+        android:layout_below="@id/main_user_one"
+        android:layout_toRightOf="@id/main_user_head"
+        android:layout_marginTop="@dimen/margin_5dp"
+        android:layout_marginLeft="@dimen/margin_10dp"
+        tools:text="所属："
+        />
+
+</RelativeLayout>

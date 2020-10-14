@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_25dp"
+    >
+
+
+
+    <TextView
+        android:id="@+id/main_school_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title"
+        android:gravity="center"
+        android:textSize="@dimen/textsize11"
+        android:textColor="@color/app_base_text_color"
+        />
+    <TextView
+        android:id="@+id/main_school_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title"
+        android:gravity="center"
+        android:layout_below="@id/main_school_name"
+        android:textSize="@dimen/textsize5"
+        android:layout_marginLeft="@dimen/margin_10dp"
+        android:layout_marginTop="@dimen/margin_3dp"
+        android:textColor="@color/app_base_text_color"
+        />
+
+    <RelativeLayout
+        android:id="@+id/main_layout"
+        android:layout_below="@id/main_school_tag"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="blocksDescendants"
+        android:focusable="true"
+        android:padding="@dimen/margin_3dp">
+
+        <com.yfy.charting_mp.charts.BarChart
+            android:id="@+id/main_layout_chart"
+            android:layout_width="match_parent"
+            android:layout_height="120dp" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/main_line_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/main_layout"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/main_scan_score"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            android:layout_height="@dimen/margin_45dp"
+            android:layout_marginRight="@dimen/margin_3dp"
+            android:backgroundTint="#d95136"
+            android:text="查看分数详情"
+            android:textSize="@dimen/textsize7"
+            android:textColor="@color/White"
+            />
+        <Button
+            android:layout_weight="1"
+            android:backgroundTint="#37aedd"
+            android:text="查看学生分布详情"
+            android:textSize="@dimen/textsize7"
+            android:textColor="@color/White"
+            android:layout_marginRight="@dimen/margin_10dp"
+            android:id="@+id/main_scan_stu_site"
+            android:layout_marginLeft="@dimen/margin_3dp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_45dp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/main_scan_stu_list"
+        android:backgroundTint="#96b1bc"
+        android:text="查看学生列表"
+        android:textSize="@dimen/textsize7"
+        android:textColor="@color/White"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_45dp"
+        android:layout_marginLeft="@dimen/margin_10dp"
+        android:layout_marginRight="@dimen/margin_10dp"
+        android:layout_below="@id/main_line_layout"/>
+</RelativeLayout>
